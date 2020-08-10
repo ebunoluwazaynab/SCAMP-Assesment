@@ -1,0 +1,22 @@
+#Python program to display the fibonacci sequence 
+
+
+#function to display the Fibonacci sequence up to n-th term
+def fibonacciRecur(n):
+    if n <= 1:
+        return n
+    else:
+        return(fibonacciRecur(n-1)) + fibonacciRecur(n-2)
+    
+    
+    
+n = int(input("Enter number: "))
+
+#check if the number is valid
+if n <= 0:
+    print("please enter a positive integer")
+else:
+    print("Fibonacci sequence:")
+    for i in range(n):
+        print(fibonacciRecur(i))
+              
